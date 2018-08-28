@@ -5,7 +5,12 @@ This code implement the binGAN method, that was presented in
 
 The training code requires [Lasagne](http://lasagne.readthedocs.io/en/latest/). Using GPU is highly advised.
 
-## Running the code
+
+## Docker setup
+docker build -t  lasagne_img .
+nvidia-docker run  -it --name lasagne_gpu --user lasagne lasagne_img bash
+
+### Running the code
 
 The procedure of training binGan is run with `train_model.py` script. 
 
@@ -24,4 +29,5 @@ The quality of image matching on Brown dataset is evaluated by script `test_brow
 The quality of image retrieval on Cifar10 dataset is evaluated by script `test_cifar10.py` 
 
 
-  
+
+

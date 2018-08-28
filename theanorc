@@ -1,0 +1,17 @@
+[global]
+floatX = float32
+optimizer=None
+device = cuda0
+mode=FAST_RUN
+
+
+[nvcc]
+fastmath = True
+
+[gcc]
+cxxflags = -ID:\MinGW\include
+
+[cuda]
+# Set to where the cuda drivers are installed.
+# You might have to change this depending where your cuda driver/what version is installed.
+root=/usr/local/cuda

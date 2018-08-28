@@ -28,11 +28,11 @@ def get_settings():
     parser.add_argument('--discriminator_pretrained', default='discriminator_pretrained.npz')
 
     # Where weight for model should be saved
-    parser.add_argument('--generator_out', default='/home/mzieba/workspace_docker/models/generator_brown.npz')
-    parser.add_argument('--discriminator_out', default='/home/mzieba/workspace_docker/models/discriminator_brown.npz')
+    parser.add_argument('--generator_out', default='/home/lasagne/workspace_docker/models/generator_brown.npz')
+    parser.add_argument('--discriminator_out', default='/home/lasagne/workspace_docker/models/discriminator_brown.npz')
 
     # Dir, where data should be downloaded
-    parser.add_argument('--data_dir', type=str, default='/home/mzieba/workspace_docker/data_2/')
+    parser.add_argument('--data_dir', type=str, default='/home/lasagne/workspace_docker/data_2/')
 
     parser.add_argument('--dataset_type', type=str, default='brown')
     #parser.add_argument('--dataset_type', type=str, default='cifar10')
