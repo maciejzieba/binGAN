@@ -50,8 +50,9 @@ RUN echo "export MKL_THREADING_LAYER=GNU" >> .bashrc
 RUN echo "export PATH=/opt/conda/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 
 ADD theanorc .theanorc
-RUN git clone https://github.com/maciejzieba/binGAN
 
-RUN mkdir /home/lasagne/host
+RUN mkdir -p /home/lasagne/host/binGAN/
+
+WORKDIR /home/lasagne/host/binGAN/
 
 CMD ["/bin/bash"]
