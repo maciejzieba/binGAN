@@ -7,8 +7,20 @@ The training code requires [Lasagne](http://lasagne.readthedocs.io/en/latest/). 
 
 
 ## Docker setup
-docker build -t  lasagne_img .
-nvidia-docker run  -it --name lasagne_gpu --user lasagne lasagne_img bash
+
+
+In the directory with `Dockerfile` and `theanorc` files are. 
+
+To build Docker image, perform commands:
+
+`docker build  --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g) -t lasagne_img .`
+
+To run docker container instance with GPU support:
+
+`nvidia-docker run  -it --name lasagne_gpu --user lasagne lasagne_img bash`
+
+The docker container already has the git repository, however you can mount you own host directory by adding `-v ` option, 
+for example `/home/user/binGAN:/home/lasagne/host/binGAN` to have results/datasets saved independently to container.
 
 ### Running the code
 
