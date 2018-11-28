@@ -3,6 +3,8 @@
 This code implement the binGAN method, that was presented in 
 *Zieba M., Semberecki P. El-Gaaly T., Trzcinski T.. "BinGAN: Learning Compact Binary Descriptors with a Regularized GAN."* [arxiv](https://arxiv.org/pdf/1806.06778.pdf) 
 
+Please watch our video [here](https://youtu.be/DpYdhhQF0f8)
+
 The training code requires [Lasagne](http://lasagne.readthedocs.io/en/latest/). Using GPU is highly advised.
 
 
