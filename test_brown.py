@@ -63,8 +63,8 @@ img = plotting.plot_img(img_tile, title= '')
 plotting.plt.savefig(args.data_name+"_patches_train.png")
 
 
-evens = [x for x in range(int(test_matched.shape[0]/2)) if x%2 == 0]
-odds = [x for x in range(int(test_matched.shape[0]/2)) if x%2 == 1]
+evens = [x for x in range(int(test_matched.shape[0])) if x%2 == 0]
+odds = [x for x in range(int(test_matched.shape[0])) if x%2 == 1]
 
 disc_layers.append(ll.GlobalPoolLayer(disc_layers[f_low_dim]))
 batch_size_test = 100
