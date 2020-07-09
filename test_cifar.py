@@ -94,7 +94,7 @@ for k in range(np.shape(test_features)[0]):
     class_values = trainy[ind[k, :]]
     y_true = (testy[k] == class_values)
     y_scores = Y[k,ind[k,:]]
-    y_scores = y_scores[::-1]
+    y_scores = np.max(y_scores) - y_scores
     ap = average_precision_score(y_true[0:num_data_train], y_scores[0:num_data_train])
     if not np.isnan(ap):
         prec = prec + ap
